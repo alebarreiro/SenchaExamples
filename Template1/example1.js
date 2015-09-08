@@ -19,7 +19,7 @@ Ext.onReady(function() {
 });
 */
 
-  /** CAMBIAR DATOS DINAMICAMENTE Y CON TEMPLATE SNIPPETS **/
+/** CAMBIAR DATOS DINAMICAMENTE Y CON TEMPLATE SNIPPETS **/
 
 var data={
   name: 'Taxi Amsterdam',
@@ -32,7 +32,7 @@ var myTpl = Ext.create(
 var c = null;
 Ext.require('Ext.Component');
 Ext.onReady(function() {
-  
+
   c = Ext.create('Ext.Component', {
     tpl: myTpl,
     data: data,
