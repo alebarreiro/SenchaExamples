@@ -10,11 +10,12 @@
     will need to resolve manually.
 */
 
+//<debug>
 Ext.Loader.setPath({
-    'Ext': '../../touch/src',
-    'FindACab': 'app',
-    'Utils': 'utils'
+    'Ext': 'touch/src',
+    'FindACab': 'app'
 });
+//</debug>
 
 Ext.application({
     name: 'FindACab',
