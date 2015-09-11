@@ -10,6 +10,12 @@
     will need to resolve manually.
 */
 
+Ext.Loader.setPath({
+    'Ext': '../../touch/src',
+    'FindACab': 'app',
+    'Utils': 'utils'
+});
+
 Ext.application({
     name: 'FindACab',
 
