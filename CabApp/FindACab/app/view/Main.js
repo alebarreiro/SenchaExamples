@@ -1,6 +1,14 @@
 Ext.define('FindACab.view.Main', {
     extend: 'Ext.Container',
+    xtype: 'mainview',
     config: {
-        html: 'Here comes the view.'
+        items:[{
+            html: 'Here comes the view.'
+        }, {
+            docked: 'bottom',
+            xtype: 'button',
+            action: 'press',
+            text: 'Demo'
+        }]
     }
 });
