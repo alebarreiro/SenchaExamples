@@ -22,4 +22,17 @@ Ext.define('FindACab.controller.CabController', {
         console.log(records.getData());
         Ext.Viewport.unmask(); //Spins a loading animation
     }
+
+    /**
+     * Then we can look up the Cabs store through the store StoreManager:
+
+     Ext.getStore('Cabs').load({
+        callback: function(records, success, operation) {
+            //callback function here
+            console.log(records);
+        },
+        scope: this
+     });
+
+     */
 });
