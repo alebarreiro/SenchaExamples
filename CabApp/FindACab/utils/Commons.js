@@ -9,14 +9,14 @@
 Ext.define('Utils.Commons', {
   statics: {
     YELP_API: 'http://api.yelp.com/business_review_search?',
-    YELP_KEY: 'ftPpQUCgfSA3yV98-uJn9g',
+    YELP_KEY: 'ixIHUvYUexmvlJI0_j2tXw',
     YELP_TERM: 'Taxi',
-    LOCATION: 'Amsterdam NL',
+    LOCATION: 'Amsterdam%20NL',
 
-    getUrl: function() {
-      return this.YELP_API + "term=" + this.YELP_TERM +
-        "&ywsid=" + this.YELP_KEY +
-        "&location=" + this.LOCATION;
+    getUrl: function(){
+      return this.YELP_API + "term=" + this.YELP_TERM + "&ywsid=" + this.YELP_KEY + "&location=" + this.LOCATION;
     }
   }
 });
+
+

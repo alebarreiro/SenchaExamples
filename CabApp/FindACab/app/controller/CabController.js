@@ -1,27 +1,25 @@
 Ext.define('FindACab.controller.CabController', {
     extend: 'Ext.app.Controller',
-
     config: {
         models: ['Cab'],
-        stores: ['Cabs'],
+        stores: ['Cabs']
+    },
+    init: function() {
 
-        refs: {
-            main: 'mainview'
-        },
-        control: {
-            'mainview': {
-                initialize: 'onInitMain',
-            },
-            'button[action=press]': {
-                tap: 'onTapMain'
-            }
-        }
+        Ext.Viewport.mask({
+            xtype: 'loadmask',
+            message: 'loading...'
+        });
+
+        Ext.getStore('Cabs').load();
+        Ext.getStore('Cabs').addListener('load',
+          this.onCabsStoreLoad,
+          this);
     },
 
-    onInitMain: function() {
-        console.log("Initialize mainview");
-    },
-    onTapMain: function() {
-        console.log("Tapped a button in mainview");
+    // Callback del load, imprime los datos y oculta el loading spinner.
+    onCabsStoreLoad: function(records, success, operation) {
+        console.log(records.getData());
+        Ext.Viewport.unmask(); //Spins a loading animation
     }
 });

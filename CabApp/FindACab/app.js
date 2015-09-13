@@ -13,7 +13,8 @@
 //<debug>
 Ext.Loader.setPath({
     'Ext': 'touch/src',
-    'FindACab': 'app'
+    'FindACab': 'app',
+    'Utils': 'utils'
 });
 //</debug>
 
@@ -21,7 +22,8 @@ Ext.application({
     name: 'FindACab',
 
     requires: [
-        'Ext.MessageBox'
+        'Ext.MessageBox',
+        'Utils.Commons'
     ],
 
     views: [
@@ -29,7 +31,8 @@ Ext.application({
     ],
 
     models:[
-        'Cab'
+        'Cab',
+        'Car'
     ],
 
     stores:[
