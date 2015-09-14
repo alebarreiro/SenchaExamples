@@ -35,4 +35,14 @@ Ext.define('FindACab.controller.CabController', {
      });
 
      */
+
+    /**
+     * We can sort the data:
+
+     Ext.getStore("Cabs").sort({
+        property: "fieldname",
+        direction: "ASC"
+     });
+
+     */
 });
